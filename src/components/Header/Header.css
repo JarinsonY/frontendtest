@@ -1,0 +1,50 @@
+header {
+    background-image: url(../../assets/images/BGHeader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 137px;
+}
+
+#head {
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.text-block-Header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+}
+
+.text-block-Header strong {
+    font-weight: 900;
+}
+
+.main-title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 261px 20%;
+    padding-bottom: 165px;
+}
+
+.company-name {
+    width: 12.5rem;
+    padding: 0.6rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        padding: 100px 5%;
+        padding-top: 160px;
+    }
+}
