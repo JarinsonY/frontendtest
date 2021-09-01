@@ -17,7 +17,7 @@
 }
 
 table {
-    color: wheat;
+    color: #fff;
     max-width: 80%;
     width: 100%;
     max-height: 30rem;
@@ -27,20 +27,12 @@ table {
     border-radius: 10px;
 }
 
-.titles {
-    background-color: #cccccc;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-}
-
 th {
     padding: 0.5rem 0;
     background: #232323;
     font-style: normal;
     font-size: large;
-    font-weight: 300;
-    color: white;
+    color: #00FF68;
 }
 
 th.o-th {
@@ -62,7 +54,7 @@ td {
     border: 1px solid rgba(1, 255, 47, 0.5);
     padding: 0.3rem;
     font-style: normal;
-    font-weight: 400;
+    line-height: 18px;
 }
 
 td:first-of-type {

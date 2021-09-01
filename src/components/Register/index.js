@@ -1,25 +1,9 @@
 import { Button, Grid, makeStyles, TextField, Typography } from "@material-ui/core"
 import { useState } from "react";
-import Logo from "../../assets/images/LogoCompany.png";
-import { Link } from "react-router-dom";
-import './Register.css'
 import { checkIn } from "../../firebase/client";
 
 // Material-UI Styles
 const useStyles = makeStyles((theme) => ({
-    contain: {
-        /* backgroundColor: '#151515',*/
-        /* color: 'white',  */
-    },
-    containerLogoCompany: {
-        borderRadius: "10px",
-        padding: '.2rem 2rem',
-        marginBottom: theme.spacing(2),
-        backgroundColor: '#151515',
-    },
-    logoCompany: {
-        width: '8rem',
-    },
     form: {
         width: '100%',
     },
@@ -44,21 +28,6 @@ const useStyles = makeStyles((theme) => ({
     },
     textField: {
         width: 200,
-    },
-    cssLabel: {
-        color: 'white'
-    },
-    cssOutlinedInput: {
-        '&$cssFocused $notchedOutline': {
-            borderColor: 'white',
-        }
-    },
-    cssFocused: {
-        color: 'red',
-    },
-    notchedOutline: {
-        borderWidth: '1px',
-        borderColor: '#00FF68'
     },
 }));
 
@@ -88,12 +57,7 @@ const Register = () => {
 
     return (
 
-        <div >
-            <div className={classmui.containerLogoCompany}>
-                <Link to='/'>
-                    <img src={Logo} alt="Logo Company" className={classmui.logoCompany}></img>
-                </Link>
-            </div>
+        <div>
             <Typography component="h1" variant="h4">
                 Regis<strong>trarse</strong>
             </Typography>
@@ -111,21 +75,6 @@ const Register = () => {
                         autoFocus
                         defaultValue={formData.userName}
                         onChange={(e) => onChange('userName', e.target.value)}
-                        InputLabelProps={{
-                            classmui: {
-                                root: classmui.cssLabel,
-                                focused: classmui.cssFocused,
-                                className: classmui.input,
-                            },
-                        }}
-                        InputProps={{
-                            classmui: {
-                                input: classmui.input,
-                                root: classmui.cssOutlinedInput,
-                                focused: classmui.cssFocused,
-                                notchedOutline: classmui.notchedOutline,
-                            },
-                        }}
                     />
                     <TextField
                         variant="outlined"
@@ -167,21 +116,6 @@ const Register = () => {
                         autoComplete="current-password"
                         defaultValue={formData.password}
                         onChange={(e) => onChange('password', e.target.value)}
-                        InputLabelProps={{
-                            classmui: {
-                                root: classmui.cssLabel,
-                                focused: classmui.cssFocused,
-                                className: classmui.input,
-                            },
-                        }}
-                        InputProps={{
-                            classmui: {
-                                input: classmui.input,
-                                root: classmui.cssOutlinedInput,
-                                focused: classmui.cssFocused,
-                                notchedOutline: classmui.notchedOutline,
-                            },
-                        }}
                     />
                     <Grid container>
                         <Button

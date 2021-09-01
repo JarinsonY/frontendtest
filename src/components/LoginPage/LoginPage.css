@@ -1,10 +1,10 @@
-/* *{
-    background-color: #858585;
-    font-family: Roboto;
-} */
-
-.contentLogin{
-    width: 100%;
+.comp-loginPage{
+    background-color: #151515;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .fa-google{

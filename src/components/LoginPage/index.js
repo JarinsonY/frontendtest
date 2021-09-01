@@ -1,7 +1,9 @@
 import { useHistory } from "react-router-dom";
 import useUser, { USER_STATES } from "../../hooks/useUser";
 import Login from "../Login";
-import './LoginPage.css'
+import './LoginPage.css';
+import Logo from "../../assets/images/LogoCompany.png";
+import { Link } from "react-router-dom";
 import Spinner from '../../assets/gifs/spinner.gif'
 import { useEffect } from "react";
 import Register from "../Register";
@@ -12,7 +14,6 @@ import { useState } from "react";
 // Material-UI Styles
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: theme.spacing(7),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -21,6 +22,19 @@ const useStyles = makeStyles((theme) => ({
         padding: '2rem',
         backgroundColor: '#fff',
         height: '100%',
+    },
+    contentLogin: {
+        width: '100%',
+    },
+    containerLogoCompany: {
+        borderRadius: "10px",
+        padding: '.6rem 2rem',
+        marginBottom: theme.spacing(2),
+        backgroundColor: '#151515',
+        width: '100%',
+    },
+    logoCompany: {
+        width: '7rem',
     },
     divLinkChange: {
         width: '100%',
@@ -102,8 +116,13 @@ export default function LoginPage() {
         <div className="comp-loginPage">
             <div>
                 {user === USER_STATES.NOT_LOGGED && (
-                    <div className="contentLogin">
+                    <div className={classmui.contentLogin}>
                         <Container component="main" maxWidth="xs" className={classmui.paper}>
+                            <div className={classmui.containerLogoCompany}>
+                                <Link to='/'>
+                                    <img src={Logo} alt="Logo Company" className={classmui.logoCompany}></img>
+                                </Link>
+                            </div>
                             <CssBaseline />
                             {seeLoginForm ?
                                 <>

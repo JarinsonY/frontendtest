@@ -105,8 +105,6 @@ const NavListings = () => {
                         <li className='nav-item'>
                             <p
                                 className='nav-links'
-                                
-                                /* className={classmui.linkLogin} */
                                 onClick={() => { scrollToPlace(610); closeMobileMenu() }}>
                                 FAVORITOS
                             </p>
